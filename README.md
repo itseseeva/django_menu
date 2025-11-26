@@ -1,5 +1,6 @@
 # Django Menu App
-![Uploading image.png…]()
+<img width="331" height="752" alt="image" src="https://github.com/user-attachments/assets/47eb3348-8cb0-47a4-a6f4-976ef65fd176" />
+
 
 Django приложение для создания и отображения древовидных меню.
 
