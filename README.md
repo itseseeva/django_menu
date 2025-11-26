@@ -1,4 +1,5 @@
 # Django Menu App
+![Uploading image.png…]()
 
 Django приложение для создания и отображения древовидных меню.
 
