@@ -1,0 +1,22 @@
+<li class="menu-item{% if node.is_active %} active{% endif %}{% if node.is_expanded %} expanded{% endif %}{% if node.children %} has-children{% endif %}">
+    <div class="menu-link-wrapper">
+        <a href="{{ node.item.get_url }}" 
+           class="menu-link{% if node.is_active %} active-link{% endif %}">
+            <span>{{ node.item.title }}</span>
+        </a>
+        {% if node.children %}
+            <button class="menu-toggle" onclick="event.stopPropagation(); toggleMenu(this);" aria-label="Развернуть меню">
+                <span class="menu-toggle-icon">▶</span>
+            </button>
+        {% endif %}
+    </div>
+    {% if node.children %}
+        <ul class="menu-submenu{% if node.is_expanded %} expanded{% endif %}">
+            {% for child in node.children %}
+                {% include 'menu/menu_item.html' with node=child %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>
+
+

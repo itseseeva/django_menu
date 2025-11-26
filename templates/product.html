@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Товар{% endblock %}
+
+{% block content %}
+<h1>Информация о товаре</h1>
+<p>Это страница товара из меню.</p>
+<p>Вы можете создать отдельные страницы для каждого товара или использовать эту как шаблон.</p>
+<div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+    <h2 style="color: #667eea; margin-bottom: 15px;">Текущая страница</h2>
+    <p><strong>URL:</strong> {{ request.path }}</p>
+    <p><strong>Название:</strong> Зависит от выбранного пункта меню</p>
+</div>
+{% endblock %}
+

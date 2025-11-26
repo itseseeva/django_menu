@@ -1,0 +1,24 @@
+{% if menu %}
+    <div class="menu-header">
+        <h3 class="menu-title">{{ menu.name }}</h3>
+    </div>
+    {% if menu_tree %}
+        <ul class="menu menu-{{ menu.name|slugify }}">
+            {% for node in menu_tree %}
+                {% include 'menu/menu_item.html' with node=node %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div class="menu-empty">
+            <strong>Меню "{{ menu.name }}" пусто.</strong><br>
+            Добавьте пункты меню в админке.
+        </div>
+    {% endif %}
+{% else %}
+    <div class="menu-empty">
+        <strong>Меню не найдено.</strong><br>
+        Проверьте название меню в template tag.
+    </div>
+{% endif %}
+
+
